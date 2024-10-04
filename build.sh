@@ -14,7 +14,7 @@ RELEASE="$(rpm -E %fedora)"
 
 # this installs the cosmic desktop environment
 copr enable ryanabx/cosmic-epoch
-rpmos-tree install cosmic-epoch
+rpm-ostree install cosmic-epoch
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
