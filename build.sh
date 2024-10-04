@@ -12,9 +12,8 @@ RELEASE="$(rpm -E %fedora)"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# this installs the cosmic desktop environment
-copr enable ryanabx/cosmic-epoch
-rpm-ostree install cosmic-epoch
+wget https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-epoch/repo/fedora-$(rpm -E %fedora)/ryanabx-cosmic-epoch-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_ryanabx-cosmic.repo
+rpm-ostree install cosmic-desktop
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
